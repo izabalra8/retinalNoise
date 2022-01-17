@@ -1,4 +1,4 @@
-function result = retinalNoise2(image, sigmaC, sigmaS, a)
+function result = retinalNoise(image, sigmaC, sigmaS, a)
 
 %retinal noise to be applied to each R,G and B channel separately
 
