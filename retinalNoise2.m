@@ -4,25 +4,21 @@ function result = retinalNoise2(image, sigmaC, sigmaS, a)
 
 [r,c,chan]=size(image);
 
-%%----amount of noise----
-
+%linearize 
 lum_1=image.^(2.2);
 lum_2=NakaRushton(lum_1);
 
 [lum_3,~]=KernelConvolution(lum_2);
 
+%noise in retina
 gaussianNoise=randn(r,c);
-
 gaussianC=fspecial('Gaussian',250,sigmaC);
 gaussianS=fspecial('Gaussian',250,sigmaS);
-
 gaussian=gaussianC-gaussianS;
-% gaussian=gaussianC;
-
 filteredGaussianNoise=imfilter(gaussianNoise,gaussian,'replicate');
 
+%addition of noise in retina
 lum_4=lum_3+a*filteredGaussianNoise;
-
 
 [~,lum3]=KernelConvolution(lum_4);
 
