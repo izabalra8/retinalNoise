@@ -18,7 +18,7 @@ This repository depends on Matlab.
 
 ### Run main.m
 
-You can simply use the file main.m to run the demo using some given example images. 
+You can simply use the file main.m to run the demo using a given example image. 
 
 To use your own images, save image  on the folder `img` under the name `img.jpg`.
 You will see the results in `img/results`.
