@@ -10,9 +10,9 @@ function main()
 img=imread('img\img.jpg');
 
 % Default parameters
-sigmaC = 
-sigmaS = 
-a = 
+sigmaC = 0.7;
+sigmaS = 1.5;
+a = 0.015;
 
 result = retinalNoise(img, sigmaC, sigmaS, a);
 
