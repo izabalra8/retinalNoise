@@ -10,8 +10,10 @@ function main()
 img=imread('img\img.jpg');
 
 % Default parameters
+sigmaC = 
+sigmaS = 
+a = 
 
-
-result = retinalNoise(img, );
+result = retinalNoise(img, sigmaC, sigmaS, a);
 
 imwrite(result, 'img/results/result.jpg', 'Quality', 100);
