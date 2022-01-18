@@ -7,7 +7,7 @@ function main()
 % 
 %   This code is property of Universitat Pompeu Fabra. 
 
-img=imread('img\img.jpg');
+img=imread('img\img.jpeg');
 
 % Default parameters
 sigmaC = 0.7;
